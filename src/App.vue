@@ -5,6 +5,7 @@
 
     <ul>
       <li><router-link to="/home">Home</router-link>  </li>
+       <li><router-link :to="{name:'crear-restaurante'}">Crear restaurante</router-link>  </li>
       <!--con la etiqueta router-link navegamos entre las diferentes vistas de nuestra aplicacion-->
       <li><router-link to="/restaurantes">Restaurantes</router-link></li>
       <!--vamos a ver como pasarle un parametro a una ruta, aqui la directiva ti, va igual  de esta manera  :to="{name:'restaurante-destacado', params:{id:16}}"-->
@@ -13,6 +14,8 @@
 
     </ul>
     <!-- el router-view es una etiqueta donde se van a ir cargando los componentes en funcion de la url-->
+   
+   <hr/>
     <router-view></router-view> 
 
 

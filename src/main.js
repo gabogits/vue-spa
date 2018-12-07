@@ -5,10 +5,16 @@ import Home from './Home.vue'
 import Contacto from './Contacto.vue'
 import RestauranteList from './RestaurantesList.vue'
 import RestauranteTop from './RestauranteTop.vue'
+import Restaurante from './Restaurante.vue'
+import RestauranteAdd from './RestauranteAdd.vue'
+import RestauranteEdit from './RestauranteEdit.vue'
 
 Vue.use(VueRouter) //aquí cargamos la libreria de vue router
 
 const routes = [ //en este arreglo vienen las rutas de nuestra aplicación 
+  {path: '/crear-restaurante', name: 'crear-restaurante',   component: RestauranteAdd},
+  {path: '/restaurante/:id', name: 'restaurante',   component: Restaurante},
+  {path: '/editar-restaurante/:id', name: 'editar-restaurante',   component: RestauranteEdit},
   {path: '/restaurante-destacado/:id', name: 'restaurante-destacado', component: RestauranteTop}, //cuando vayamos a restaurante destacado vamos a tener que recibir un parametro por la url y le pasamos un parametro en la ruta con name
   {path: '/restaurantes', component: RestauranteList},
   {path: '/contacto', component: Contacto},
